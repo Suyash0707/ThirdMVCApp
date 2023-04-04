@@ -18,7 +18,7 @@ public partial class SecondMvcappDbContext : DbContext
     public virtual DbSet<Student> Students { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("name=SuyashConnect");
+        => optionsBuilder.UseSqlServer("server=localhost; database=SecondMVCAppDB; trusted_connection=true; trustservercertificate=true;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

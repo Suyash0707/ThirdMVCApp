@@ -8,7 +8,7 @@ namespace ThirdMVCApp.Controllers
         public IActionResult Index()
         {
             SecondMvcappDbContext obj = new SecondMvcappDbContext();
-            var students = obj.Students;
+            var students = obj.Students.ToList();
 
             return View(students);
         }
